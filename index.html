@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Heirloom Table – table linens</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f6f3ed;--ink:#2b2926;--muted:#85807a;--line:#e9e5de;--accent:#8d7a58;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.8 Jost,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;margin:0;line-height:1.1}
+a{color:inherit}button{font:inherit;cursor:pointer}:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+.top{background:var(--soft);text-align:center;font-size:13px;letter-spacing:.08em;padding:8px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 4vw}
+.logo{font:400 32px "Cormorant Garamond",Georgia,serif;text-decoration:none;letter-spacing:.04em}
+nav{display:flex;gap:28px}nav a,.cartb{font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}nav a.on{border-bottom:1px solid var(--ink)}
+.cartb{background:none;border:0;color:var(--ink);justify-self:end;padding:0}
+.hero{height:min(72vh,600px);background:var(--soft)}.hero svg{width:100%;height:100%}
+.intro{text-align:center;padding:72px 5vw 40px;max-width:760px;margin:0 auto}
+.intro h1{font-size:clamp(38px,5.4vw,68px)}.intro p{color:var(--muted);font-size:18px}
+em,.it{font-style:italic}
+.wrap{padding:72px 4vw;max-width:1280px;margin:0 auto}
+.sh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:34px;gap:20px;flex-wrap:wrap}
+.sh h2{font-size:clamp(30px,3.6vw,44px)}.sh h2 small{font:300 13px Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-right:8px}
+.ln{font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);text-decoration:none;padding-bottom:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:44px 26px}
+.card{text-decoration:none;display:block}.card .art{background:var(--soft);overflow:hidden}.card svg{transition:transform .6s}.card:hover svg{transform:scale(1.04)}
+.card h3{font:400 15px Jost,sans-serif;margin:14px 0 0;letter-spacing:.02em}.card span{color:var(--muted);font-size:14px}
+.band{display:grid;grid-template-columns:1fr 1fr;background:var(--soft)}.band .pic{overflow:hidden}.band .tx{padding:8vw 7vw;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.band h2{font-size:clamp(34px,4.4vw,58px)}.band p{color:var(--muted);max-width:42ch;margin:0 0 10px}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px}
+.post{text-decoration:none;display:block}.post .art{background:var(--soft);overflow:hidden;margin-bottom:14px}.post small{color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:12px}.post h3{font-size:28px;margin-top:4px}
+.art{line-height:0}svg{display:block;width:100%;height:auto}
+.meet{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;border-top:1px solid var(--line)}
+.meet p{color:var(--muted);max-width:52ch}
+.news{background:var(--soft);text-align:center;padding:72px 5vw}.news form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+input{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:10px 4px;font:inherit;min-width:min(230px,80vw)}
+.btn{background:var(--ink);color:#fff;border:1px solid var(--ink);padding:13px 34px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:inline-block}.btn.alt{background:transparent;color:var(--ink)}
+footer{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:30px;padding:56px 4vw 30px;max-width:1280px;margin:0 auto}footer h4{font:400 13px Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin:0 0 12px}footer a{display:block;text-decoration:none;color:var(--muted);font-size:15px}
+.fine{text-align:center;color:var(--muted);font-size:13px;padding-bottom:30px}
+.tabs{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:36px}.tabs button{background:none;border:0;border-bottom:1px solid transparent;color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:0 0 3px}.tabs button.on{color:var(--ink);border-color:var(--ink)}
+.pd{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:start}.pd .art{background:var(--soft)}
+.price{font-size:20px;margin:8px 0 18px}
+.sw{display:flex;gap:12px;margin:8px 0 22px}.sw button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);outline-offset:3px}.sw button.on{outline:1px solid var(--ink)}
+.qty{display:inline-flex;border:1px solid var(--ink);margin-right:12px;vertical-align:middle}.qty button{background:none;border:0;width:40px;height:44px;font-size:18px}.qty b{min-width:30px;text-align:center;line-height:44px;font-weight:300}
+.tale{border-top:1px solid var(--line);margin-top:34px;padding-top:24px}.tale h3{font-size:28px;margin-bottom:8px}.tale p{color:var(--muted);margin:0}
+ul.d{padding-left:18px;color:var(--muted);margin:20px 0 0}
+#drawer{position:fixed;inset:0 0 0 auto;width:min(420px,100%);background:#fff;border-left:1px solid var(--line);z-index:40;padding:calc(26px + env(safe-area-inset-top,0px)) 26px 26px;transform:translateX(104%);transition:transform .35s;display:flex;flex-direction:column}#drawer.open{transform:none}
+#lines{flex:1;overflow:auto}.cl{display:grid;grid-template-columns:70px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}.cl button{background:none;border:0;color:var(--muted);text-decoration:underline;padding:0}
+.bar{height:2px;background:var(--line);margin:8px 0 12px}.bar i{display:block;height:100%;background:var(--ink)}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 26px;font-size:14px;z-index:50;opacity:0;pointer-events:none;transition:opacity .2s}#toast.show{opacity:1}
+@media(max-width:800px){.band,.pd,.meet{grid-template-columns:1fr}header{grid-template-columns:auto 1fr;gap:10px}header nav{order:3;grid-column:1/-1;justify-content:center;margin-top:10px}.logo{grid-column:1}.cartb{grid-column:2}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<div class="top">Free delivery on orders over $100</div>
+<header><a class="logo" href="#home" style="grid-column:2;grid-row:1">Heirloom Table</a><nav style="grid-column:1;grid-row:1"><a href="#shop" data-n="shop">Shop</a><a href="#journal" data-n="journal">Journal</a><a href="#about" data-n="about">About</a></nav><button class="cartb" id="bagBtn" style="grid-column:3;grid-row:1">Cart (<span id="cnt">0</span>)</button></header>
+<main id="app"></main>
+<section class="news"><h2 style="font-size:40px">Subscribe to the <em>newsletter</em></h2><p style="color:var(--muted);max-width:52ch;margin:8px auto 0">Be the first to hear about new linens, restocks and the stories behind them.</p><form onsubmit="event.preventDefault();toast('Thank you for subscribing')"><input placeholder="First name" aria-label="First name"><input type="email" placeholder="Email" aria-label="Email"><button class="btn">Sign up</button></form></section>
+<footer><div><h4>Shop</h4><a href="#shop">Table runners</a><a href="#shop">Tablecloths</a><a href="#shop">Place mats</a><a href="#shop">Napkins</a></div><div><h4>Read</h4><a href="#journal">Journal</a><a href="#about">About</a></div><div><h4>Support</h4><a href="#about">Shipping and returns</a><a href="#about">Care guide</a><a href="#about">Contact</a></div><div><h4>Follow</h4><a href="#home">Instagram</a><a href="#home">Pinterest</a></div></footer>
+<div class="fine">Prototype storefront. Illustrations, prices and story text are samples.</div>
+<aside id="drawer" aria-label="Shopping cart"><div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="font-size:36px">Your cart</h2><button class="cartb" id="closeBag">Close</button></div><div id="ship" style="font-size:14px;color:var(--muted);margin-top:10px"></div><div id="lines"></div><p style="display:flex;justify-content:space-between;font-size:18px"><span>Subtotal</span><b id="tot" style="font-weight:400">$0</b></p><button class="btn" id="co">Checkout</button></aside>
+<div id="toast"></div>
+<script>
+const CATS={runner:'Table runners',cloth:'Tablecloths',mat:'Place mats',napkin:'Napkins'};
+const P=[
+{id:'sage-stripe-runner',n:'Sage Stripe Linen Runner',c:'runner',p:48,sz:'40 × 180 cm',art:{k:'runner'},v:[['Sage','#f3efe3','#8ea17b'],['Dusty blue','#f4f1ea','#8aa2b8'],['Blush','#f7eee8','#cfa59b']],d:['Washed European-style linen','Woven stripe borders','Machine washable, softer with every wash'],s:'Linen is among the oldest cloths in the world, woven from flax long before cotton reached most tables. A striped runner was once the quiet way a household protected its good cloth, and then became the thing guests remembered.'},
+{id:'ivory-knot-runner',n:'Ivory Hand-Knotted Runner',c:'runner',p:62,sz:'35 × 200 cm',art:{k:'runner',m:'knot'},v:[['Dove grey','#f6f1e6','#b3aea6'],['Honey','#f6efdf','#d0ae6c'],['Sage','#f4f1e4','#a1b194']],d:['Chunky woven cotton','Hand-knotted accents','Soft finished edge'],s:'Each small knot is tied by hand, so no two runners are exactly alike. The pattern follows the old village habit of marking a finished cloth with a signature stitch.'},
+{id:'noel-pine-runner',n:'Noël Pine Embroidered Runner',c:'runner',p:58,sz:'33 × 180 cm',art:{k:'runner',m:'pine'},v:[['Forest','#f5eedb','#6a8a5f'],['Gold','#f6f0df','#bf9b4c'],['Blue','#f1eee4','#6b8cae']],d:['Natural cotton-linen blend','Embroidered pines, lace edge','Folds flat for storage'],s:'Families often bring out one winter cloth and keep it for decades. Stitched pines walk down the centre, so the table feels dressed for the season before a single dish arrives.'},
+{id:'blue-leaf-tablecloth',n:'Blue Leaf Embroidered Tablecloth',c:'cloth',p:129,sz:'150 × 250 cm',art:{k:'cloth',m:'leaf'},v:[['Blue','#fdfaf3','#5f84aa'],['Sage','#fdfaf3','#87a07a'],['Rose','#fdf7f2','#c7938e']],d:['Ivory cotton, leaf embroidery','Seats six to eight','Hem finished by hand'],s:'Leaf and vine borders come from a long tradition of embroidery made for feast days. The border sits where plates sit, so every guest gets a small garden.'},
+{id:'gold-star-tablecloth',n:'Golden Star Tablecloth',c:'cloth',p:139,sz:'150 × 250 cm',art:{k:'cloth',m:'star'},v:[['Gold','#fcf7ea','#c9a652'],['Silver','#f8f8f6','#b0b5ba'],['Copper','#fcf3ec','#c4896a']],d:['Soft ivory cotton','Scattered thread stars','Made for long dinners'],s:'Stars are the oldest table decoration there is: a promise that the evening will be remembered. Candlelight brings the thread to life.'},
+{id:'seagrass-placemats',n:'Seagrass Round Place Mats, set of 4',c:'mat',p:36,sz:'Ø 36 cm',art:{k:'mat'},v:[['Natural','#cdb98f','#5a4f3b'],['Honey','#d8bd80','#97794a'],['Sage','#c0c7aa','#5c6849']],d:['Coiled natural seagrass','Wipe clean, dry flat','Each mat has its own grain'],s:'Seagrass is gathered, dried and coiled round and round by hand. Slow work, and you can see it: the spiral is the maker’s signature.'},
+{id:'rope-weave-placemats',n:'Cream Rope-Weave Place Mats, set of 4',c:'mat',p:34,sz:'Ø 38 cm',art:{k:'mat',m:'r'},v:[['Cream','#ece1c9','#cdc1a0'],['Stone','#ded9cd','#b3ac9c'],['Oat','#e6d4b0','#c1a97d']],d:['Twisted cotton rope','Sturdy and wipeable','Pairs with linen napkins'],s:'Rope weaving was a sailor’s skill before it was a table’s. Here the same coil becomes a soft ring under your plate.'},
+{id:'pinstripe-napkins',n:'Pinstripe Linen Napkins, set of 6',c:'napkin',p:42,sz:'45 × 45 cm',art:{k:'napkin'},v:[['Charcoal','#f8f4ea','#66615a'],['Sage','#f6f2e6','#8fa282'],['Navy','#f6f2e8','#566b88']],d:['Linen-cotton, woven pinstripe','Generous size, quiet drape','Pre-washed for softness'],s:'A good napkin is meant to be used, creased and washed a hundred times. These are made to look better each year than the last.'}];
+const T=[{t:'Why a runner?',g:'Table history',i:0,x:'The table runner began as a practical thing: a strip of cloth to protect the good tablecloth, or polished wood, from spills and wear. Over time the strip became the part people noticed. A runner sets the mood of a table in a single line.'},
+{t:'The world’s oldest cloth',g:'Materials',i:3,x:'Linen comes from the flax plant and has been woven for thousands of years, from ancient Egyptian cloths to folded napkins in grand dining rooms. It starts crisp and turns softer with every wash, which is why families pass it down.'},
+{t:'Coiled by hand',g:'Craft',i:5,x:'Seagrass, rope and cane mats are built by coiling, turning and stitching, round and round. No machine copies the slight irregularity of a hand-coiled ring. The grain under your plate is a record of the person who made it.'},
+{t:'Stitched for the feast',g:'Tradition',i:4,x:'Embroidered leaves, stars and pines come from the tradition of dressing the table for a feast day. Threads sit where hands and plates meet, so the pattern reaches each guest up close.'}];
+let cart=[],cat='all';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function art(o,l){const pl=(x,y,r)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff" stroke="#e4ded2"/><circle cx="${x}" cy="${y}" r="${r*.68}" fill="none" stroke="#eee9df"/>`;
+const bg='<rect width="400" height="400" fill="#efe9de"/>'+[1,2,3,4,5,6,7].map(i=>`<rect y="${i*50}" width="400" height="1" fill="#e6dfd1"/>`).join('');
+let s='<svg viewBox="0 0 400 400" role="img" aria-label="'+l+'">';
+if(o.k=='runner'){s+=bg+`<rect y="135" width="400" height="130" fill="${o.a}"/>`+[147,155,245,253].map(y=>`<rect y="${y}" width="400" height="2.5" fill="${o.b}"/>`).join('');
+if(o.m=='pine')s+=[100,200,300].map(x=>`<path d="M${x} 170 l16 34 h-10 l14 28 h-40 l14-28 h-10z" fill="${o.b}"/><rect x="${x-2}" y="232" width="4" height="8" fill="#9b7f5c"/>`).join('');
+if(o.m=='knot')for(let x=40;x<400;x+=64)s+=`<circle cx="${x}" cy="200" r="11" fill="${o.b}"/><circle cx="${x+9}" cy="206" r="8" fill="${o.b}"/>`;
+s+=pl(80,66,42)+pl(320,66,42)+pl(80,334,42)+pl(320,334,42)}
+else if(o.k=='cloth'){s+=`<rect width="400" height="400" fill="${o.a}"/><rect x="14" y="14" width="372" height="372" fill="none" stroke="${o.b}" stroke-opacity=".4"/>`;
+for(let i=0;i<18;i++){const a=i/18*6.283,x=200+140*Math.cos(a),y=200+140*Math.sin(a);s+=o.m=='star'?`<text x="${x}" y="${y+6}" font-size="20" text-anchor="middle" fill="${o.b}">★</text>`:`<ellipse cx="${x}" cy="${y}" rx="5" ry="13" fill="${o.b}" transform="rotate(${a*57.3+90} ${x} ${y})"/>`}s+=pl(200,200,80)}
+else if(o.k=='mat'){s+=bg;for(let r=150,i=0;r>60;r-=11,i++)s+=`<circle cx="200" cy="200" r="${r}" fill="none" stroke="${i%2?o.b:o.a}" stroke-width="11" stroke-dasharray="${i%2&&o.m!='r'?'6 5':'none'}"/>`;s+=pl(200,200,64)}
+else s+=bg+[[-14,120,150],[12,230,210],[-4,170,260]].map(([r,x,y])=>`<g transform="rotate(${r} ${x} ${y})"><rect x="${x-80}" y="${y-80}" width="160" height="160" fill="${o.a}" stroke="#e0d9ca"/>${[-56,-38,38,56].map(d=>`<rect x="${x-80}" y="${y+d}" width="160" height="2.5" fill="${o.b}"/>`).join('')}</g>`).join('');
+return s+'</svg>'}
+const pa=(p,i=0)=>art({...p.art,a:p.v[i][1],b:p.v[i][2]},p.n);
+function scene(){const w=[120,530,940].map(x=>`<path d="M${x} 400V190a80 80 0 0 1 160 0v210z" fill="#fff" stroke="#e8e2d6"/><path d="M${x+80} 110v290" stroke="#e8e2d6" stroke-width="2"/>`).join('');
+const pl=x=>`<ellipse cx="${x}" cy="505" rx="92" ry="20" fill="#fff" stroke="#e6e0d3"/><ellipse cx="${x}" cy="505" rx="60" ry="12" fill="none" stroke="#eee9df"/>`;
+return `<svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A white table set with a linen runner and pampas grass"><defs><linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f4ee"/><stop offset="1" stop-color="#ece7dd"/></linearGradient></defs><rect width="1200" height="600" fill="url(#w)"/>${w}<rect y="410" width="1200" height="190" fill="#e4dccd"/><path d="M60 410h1080l90 190H-30z" fill="#fff"/><path d="M430 410h340l90 190H340z" fill="#9fb18f"/><path d="M450 410l-80 190M750 410l80 190" stroke="#fff" stroke-width="4"/>${pl(240)+pl(960)}<path d="M562 440c-18-34-18-76 2-102h72c20 26 20 68 2 102z" fill="#fff" stroke="#e1dacb"/><g stroke="#b9a27c" stroke-width="2.5" fill="none"><path d="M585 342C560 280 538 244 506 200"/><path d="M600 340C600 270 600 230 600 168"/><path d="M615 342C640 280 662 244 694 200"/></g><g fill="#ecdcc0"><ellipse cx="506" cy="198" rx="13" ry="38" transform="rotate(-30 506 198)"/><ellipse cx="600" cy="164" rx="13" ry="42"/><ellipse cx="694" cy="198" rx="13" ry="38" transform="rotate(30 694 198)"/></g><g fill="#fff" stroke="#e1dacb"><rect x="470" y="450" width="14" height="60" rx="3"/><rect x="716" y="450" width="14" height="60" rx="3"/></g><g fill="#f4d79b"><ellipse cx="477" cy="440" rx="4" ry="9"/><ellipse cx="723" cy="440" rx="4" ry="9"/></g></svg>`}
+const card=p=>`<a class="card" href="#p-${p.id}"><div class="art">${pa(p)}</div><h3>${p.n}</h3><span>$${p.p}.00</span></a>`;
+const post=(s)=>`<a class="post" href="#journal"><div class="art">${pa(P[s.i])}</div><small>${s.g}</small><h3>${s.t}</h3></a>`;
+const V={
+home:()=>`<section class="hero">${scene()}</section><div class="intro"><h1>Linens for the <em>everyday</em> table</h1><p>Runners, embroidered cloths, hand-coiled mats and napkins in soft natural colours. Each piece arrives with the story of how it is made.</p><a class="btn" href="#shop">Shop the collection</a></div>
+<section class="wrap"><div class="sh"><h2><small>Shop</small><em>Table runners</em></h2><a class="ln" href="#shop" data-cat="runner">Shop all</a></div><div class="grid">${P.filter(p=>p.c=='runner').concat([P[5]]).map(card).join('')}</div></section>
+<section class="band"><div class="pic">${pa(P[3])}</div><div class="tx"><h2>Where craft <em>meets the table</em></h2><p>Embroidered leaves and stars have dressed feast tables for generations. Ours are stitched where plates sit, so every guest gets a small garden.</p><div><a class="btn alt" href="#p-blue-leaf-tablecloth">Browse</a></div></div></section>
+<section class="wrap"><div class="sh"><h2><small>Browse</small><em>Heirloom Table</em></h2><a class="ln" href="#shop">All pieces</a></div><div class="grid">${P.map(card).join('')}</div></section>
+<section class="wrap" style="padding-top:0"><div class="sh"><h2>The <em>Journal</em></h2><a class="ln" href="#journal">View more</a></div><div class="posts">${T.slice(0,3).map(post).join('')}</div></section>
+<section class="wrap meet"><div class="art">${pa(P[0])}</div><div><h2 style="font-size:clamp(34px,4vw,54px)">Meet <em>Heirloom Table</em></h2><p>Replace this text with your own story: who you are, where your pieces are made and why you chose them. Customers love knowing the people behind a table linen, and a few honest lines go further than any slogan.</p><a class="ln" href="#about">Learn more</a></div></section>`,
+shop:()=>`<section class="wrap"><div class="sh"><h2><em>The collection</em></h2></div><div class="tabs">${['all',...Object.keys(CATS)].map(k=>`<button class="${cat==k?'on':''}" data-f="${k}">${k=='all'?'All pieces':CATS[k]}</button>`).join('')}</div><div class="grid">${P.filter(p=>cat=='all'||p.c==cat).map(card).join('')}</div></section>`,
+journal:()=>`<section class="wrap"><div class="sh"><h2>The <em>Journal</em></h2></div><div class="posts">${T.map(s=>`<div class="post"><div class="art">${pa(P[s.i])}</div><small>${s.g}</small><h3>${s.t}</h3><p style="color:var(--muted)">${s.x}</p></div>`).join('')}</div></section>`,
+about:()=>`<section class="wrap meet" style="border:0"><div class="art">${scene().replace('slice','meet')}</div><div><h2 style="font-size:clamp(34px,4vw,54px)">About <em>Heirloom Table</em></h2><p>We sell fewer things and choose them carefully: natural linen, cotton, seagrass and rope, finished by hand and packed in tissue with a story card inside.</p><p>Shipping and returns, care instructions and contact details can go here.</p></div></section>`,
+product:p=>{const o=P.filter(x=>x!=p&&x.c==p.c).concat(P.filter(x=>x.c!=p.c)).slice(0,4);return `<section class="wrap"><p style="margin:0 0 24px"><a class="ln" href="#shop">Back</a></p><div class="pd"><div class="art" id="pa">${pa(p)}</div><div><h1 style="font-size:clamp(34px,4.4vw,56px)">${p.n}</h1><div class="price">$${p.p}.00</div><p style="color:var(--muted);margin:0">Size: ${p.sz}</p><p style="margin:14px 0 0">Colour: <span id="vn">${p.v[0][0]}</span></p><div class="sw">${p.v.map((v,i)=>`<button data-vi="${i}" class="${i?'':'on'}" style="background:${v[2]}" aria-label="${v[0]}"></button>`).join('')}</div><span class="qty"><button id="mn" aria-label="Fewer">−</button><b id="q">1</b><button id="pl" aria-label="More">+</button></span><button class="btn" id="add">Add to cart</button><ul class="d">${p.d.map(d=>`<li>${d}</li>`).join('')}</ul><div class="tale"><h3>The <em>story</em></h3><p>${p.s}</p></div></div></div></section><section class="wrap" style="padding-top:0"><div class="sh"><h2>You may <em>also like</em></h2></div><div class="grid">${o.map(card).join('')}</div></section>`}};
+function render(){const h=location.hash.slice(1)||'home';const p=P.find(x=>'p-'+x.id==h);
+$('#app').innerHTML=p?V.product(p):(V[h]||V.home)();scrollTo(0,0);$$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.n==h));
+if(p){let q=1,vi=0;$$('.sw button').forEach(b=>b.onclick=()=>{vi=+b.dataset.vi;$('#pa').innerHTML=pa(p,vi);$('#vn').textContent=p.v[vi][0];$$('.sw button').forEach(x=>x.classList.toggle('on',x==b))});
+$('#mn').onclick=()=>{q=Math.max(1,q-1);$('#q').textContent=q};$('#pl').onclick=()=>{q++;$('#q').textContent=q};
+$('#add').onclick=()=>{const l=cart.find(x=>x.id==p.id&&x.vi==vi);l?l.q+=q:cart.push({id:p.id,vi,q});upd();toast('Added to your cart')}}}
+function upd(){const sum=cart.reduce((a,l)=>a+l.q*P.find(x=>x.id==l.id).p,0);$('#cnt').textContent=cart.reduce((a,b)=>a+b.q,0);
+$('#lines').innerHTML=cart.length?cart.map((l,i)=>{const p=P.find(x=>x.id==l.id);return `<div class="cl"><div class="art">${pa(p,l.vi)}</div><div>${p.n}<br><span style="color:var(--muted)">${p.v[l.vi][0]} · ${l.q} × $${p.p}</span><br><button data-r="${i}">Remove</button></div><span>$${l.q*p.p}</span></div>`}).join(''):'<p style="color:var(--muted)">Your cart is empty. Browse the collection to add a piece.</p>';
+$('#tot').textContent='$'+sum;$('#ship').innerHTML=(sum>=100?'Your order qualifies for free delivery.':`Add $${100-sum} more for free delivery.`)+`<div class="bar"><i style="width:${Math.min(100,sum)}%"></i></div>`}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+document.addEventListener('click',e=>{const f=e.target.closest('[data-f]');if(f){cat=f.dataset.f;render();return}const c=e.target.closest('[data-cat]');if(c)cat=c.dataset.cat;const r=e.target.closest('[data-r]');if(r){cart.splice(+r.dataset.r,1);upd()}});
+$('#bagBtn').onclick=()=>$('#drawer').classList.add('open');$('#closeBag').onclick=()=>$('#drawer').classList.remove('open');
+$('#co').onclick=()=>toast(cart.length?'Checkout is not built in this prototype':'Your cart is empty');
+addEventListener('hashchange',()=>{$('#drawer').classList.remove('open');render()});upd();render();
+</script></body></html>
